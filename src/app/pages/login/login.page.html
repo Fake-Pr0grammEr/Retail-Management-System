@@ -9,10 +9,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div class="loginDesign">
   <br> <br>
-  <ion-input label="Outline input" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+  <ion-input label="User Name" [(ngModel)]="username" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
   <br> <br>
-  <ion-input label="Outline input" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+  <ion-input label="Password" [(ngModel)]="password"  label-placement="floating" fill="outline" placeholder="Enter text"  type="password" ></ion-input>
+  <br> <br>
+  <ion-button id="open-toast" expand="full">Log-in</ion-button>
 
-   <ion-button expand="full">Full</ion-button>
+</div>
+<ion-toast trigger="open-toast" message="{{username}} and {{password}}" [duration]="5000"></ion-toast>
+
 </ion-content>
