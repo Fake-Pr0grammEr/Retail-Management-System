@@ -11,13 +11,9 @@
 <ion-content [fullscreen]="true">
   <div class="registrationDesign">
   <br> <br>
-  <ion-input [(ngModel)]="fname" label="First Name" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+  <ion-input [(ngModel)]="fname" label="Full Name" abel-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
   <br> <br>
-  <ion-input [(ngModel)]="lname" label="Last Name" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-  <br> <br>
-  <ion-input [(ngModel)]="mname"label="Middle Name" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
-  <br> <br>
-  <ion-input [(ngModel)]="cellnum" label="Cellphone No." label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
+  <ion-input [(ngModel)]="username" label="User Name" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
   <br> <br>
   <ion-input [(ngModel)]="email" label="E-mail" label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
   <br> <br>
@@ -26,7 +22,6 @@
   <ion-input [(ngModel)]="conpass" label="Confirm Password" label-placement="floating" fill="outline" placeholder="Enter text"  type="password" ></ion-input>
   <br> <br>
 
- <ion-button id="open-toast" expand="full">Register</ion-button>
+ <ion-button (click)="register()" id="open-toast" expand="full">Register</ion-button>
 </div>
-<ion-toast trigger="open-toast" message="{{fname}}&{{lname}}&{{mname}}&{{cellnum}}&{{email}}&{{pass}}&{{conpass}}" [duration]="5000"></ion-toast>
 </ion-content>
